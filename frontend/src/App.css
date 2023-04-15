@@ -1,0 +1,9 @@
+body { 
+    margin : 0px;
+}
+
+:root{
+    --card-border-radius : 32px;
+    --button-border-radius : 12px;
+    --button-width: 60px;
+}

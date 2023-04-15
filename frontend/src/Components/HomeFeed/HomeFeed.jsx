@@ -14,14 +14,13 @@ function HomeFeed() {
             .select();
 
             setFeed(data);
-            console.log(feed);
         }
 
         run()
     }, [])
 
   return (
-    <div>
+    <div className='home-feed'>
         {
             feed
             ?

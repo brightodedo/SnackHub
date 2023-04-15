@@ -53,7 +53,7 @@ function CreateSnack() {
         })
 
         setError("")
-        
+
         // redirect back to the home page
         window.location = "/";
     }
@@ -62,7 +62,7 @@ function CreateSnack() {
 
   return (
     <div>
-        <div>
+        <div className='post-details'>
             {
                 error === "" 
                 ? 
@@ -70,12 +70,12 @@ function CreateSnack() {
                 :
                 <p className='error'>{error}</p>
             }
-             <form action="" onSubmit={handleOnSubmit}>
-                <input type="text" placeholder='Title' onChange={handleOnChange} name="title" value={post.title}/>
-                <textarea name="content" id="" cols="30" rows="10" placeholder='Tell me about your snack' onChange={handleOnChange} value={post.content}></textarea>
-                <input type="text" placeholder='Image URL' onChange={handleOnChange} name="image" value={post.image}/>
-                <input type='number' onChange={handleOnChange} name="calories" value={post.calories}/>
-                <button > post snack </button>
+             <form action="" onSubmit={handleOnSubmit} className='post-form'>
+                <input type="text" placeholder='Title' onChange={handleOnChange} name="title" value={post.title} className='post-input'/>
+                <textarea name="content" id="" cols="30" rows="10" placeholder='Tell me about your snack' onChange={handleOnChange} value={post.content} className='post-textArea'></textarea>
+                <input className='post-input' type="text" placeholder='Image URL' onChange={handleOnChange} name="image" value={post.image}/>
+                <input className='post-input' type='number' onChange={handleOnChange} name="calories" value={post.calories}/>
+                <button className='post-button'> post snack </button>
              </form>
         </div>
     </div>

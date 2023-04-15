@@ -1,0 +1,51 @@
+    .feed-card{
+    color: black;
+}
+
+.feed-sameline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.feed-sameline > *{
+    margin: 0px 15px;
+}
+
+.feedy a{
+    text-decoration: none;
+}
+
+.feedy{
+    max-width: 320px;
+    border-radius: var(--card-border-radius);
+    background-color: red;
+    padding: 0px 0px 15px 0px;
+}
+
+.feed-image > img{
+    max-width: 320px;
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+.feed-image{
+    margin: 0px;
+}
+
+.delete-button, .edit-button{
+    border-radius: var(--button-border-radius);
+    height: 24px;
+    border: none;
+    background-color: blue;
+    width: var(--button-width);
+    color: aliceblue;
+}
+
+a.edit-button{
+    text-align: center;
+}
+
+.delete-button:hover{
+    cursor: pointer;
+}

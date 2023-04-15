@@ -76,7 +76,7 @@ function UpdateSnack() {
 
   return (
     <div>
-        <div>
+        <div className='post-details'>
             {
                 error === "" 
                 ? 
@@ -84,12 +84,12 @@ function UpdateSnack() {
                 :
                 <p className='error'>{error}</p>
             }
-             <form action="" onSubmit={handleOnSubmit}>
-                <input type="text" placeholder='Title' onChange={handleOnChange} name="title" value={snack.title}/>
-                <textarea name="content" id="" cols="30" rows="10" placeholder='Tell me about your snack' onChange={handleOnChange} value={snack.content}></textarea>
-                <input type="text" placeholder='Image URL' onChange={handleOnChange} name="imageUrl" value={snack.imageUrl}/>
-                <input type='number' onChange={handleOnChange} name="calories" value={snack.calories}/>
-                <button > update snack </button>
+             <form action="" onSubmit={handleOnSubmit} className='post-form'>
+                <input className='post-input' type="text" placeholder='Title' onChange={handleOnChange} name="title" value={snack.title}/>
+                <textarea name="content" id="" cols="30" rows="10" placeholder='Tell me about your snack' onChange={handleOnChange} value={snack.content} className='post-textArea'></textarea>
+                <input className='post-input' type="text" placeholder='Image URL' onChange={handleOnChange} name="imageUrl" value={snack.imageUrl}/>
+                <input className='post-input' type='number' onChange={handleOnChange} name="calories" value={snack.calories}/>
+                <button className='post-button'> update snack </button>
              </form>
         </div>
     </div>

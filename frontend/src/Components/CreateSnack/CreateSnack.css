@@ -1,0 +1,47 @@
+.post-details{
+    margin: 15px auto;
+    text-align: center;
+}
+
+.post-form{
+    border-radius: var(--card-border-radius);
+    border :1px solid lightgrey;
+    box-shadow: 0px 0px 10px rgb(129, 69, 153);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 15px;
+    gap: 12px;
+}
+
+input.post-input{
+    border : 0px;
+    border-bottom: 1px solid black;
+    width: 375px;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
+p.error{
+    color: RED;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.post-textArea{
+    width: 375px;
+}
+.post-button{
+    border-radius: var(--button-border-radius);
+    height: 24px;
+    border: none;
+    background: linear-gradient(45deg, blue, red);
+    color: aliceblue;
+    text-align: center;
+}
+
+.post-button:hover{
+    cursor: pointer;
+}
