@@ -5,8 +5,17 @@ import { supabase } from '../../client';
 
 function FeedCard({props}) {
 
+    const [deleteMe, setDeleteMe] = React.useState(false)
 
-    const handleDelete = async(id) => {
+    const handleDelete = () => {
+        setDeleteMe(true)
+    }
+    
+    const onClickNo = () => {
+        setDeleteMe(false)
+    }
+
+    const onClickYes = async(id) => {
         const result = await supabase
         .from('snackhub')
         .delete()
@@ -35,6 +44,21 @@ function FeedCard({props}) {
             <button className='delete-button' onClick={() => {handleDelete(props.id)}}>delete</button>
             <Link to={`/update/${props.id}`} className='edit-button'>edit</Link>
         </div>
+
+        {
+            deleteMe
+            ? 
+            <div className='delete-overview'>
+                <h3>Are you sure you want to delete <b>{props.title}</b>?</h3>
+                <div className='delete'>
+                    <button className='delete-button' onClick={ () => {onClickYes(props.id)}}>yes</button>
+                    <button className='delete-button' onClick={onClickNo}>no</button>
+                </div>
+            </div>
+            :
+            <></>
+        }
+
     </div>
   )
 }

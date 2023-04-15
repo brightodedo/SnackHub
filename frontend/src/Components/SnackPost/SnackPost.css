@@ -1,0 +1,37 @@
+.snack-view{
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.snack-container{
+    border: 1px solid lightgrey;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0px 0px 10px purple;
+    width: 1200px;
+    align-items: center;
+    padding: 10px;
+}
+
+.snack-container img{
+    /* max-width: 1050px; */
+    max-height: 422px;
+}
+
+.snack-container section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.snack-container section > * {
+    margin: 0px;
+}
+
+.snack-container>div{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
